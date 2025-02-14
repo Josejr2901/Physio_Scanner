@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Rate Monitoring</title>
+    <link rel="stylesheet" href="css/heart_rate.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for Graphs -->
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="dashboard.html">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+            <span>Cardiovascular Biometric Tracker</span>
+        </div>
+        <button class="sign-in">Username</button>
+    </header>
+
+    <main class="heart-rate-container">
+        <div class="sensor-values">
+            <button class="sensor-btn">ECG <span id="ecg">--</span> bpm</button>
+            <button class="sensor-btn">Temperature <span id="temperature">--</span>°C</button>
+            <button class="sensor-btn">PPG <span id="ppg">--</span> bpm</button>
+        </div>
+
+        <div class="heart-rate-content">
+            <div class="heart-rate-info">
+                <h1>Heart Rate Sensor</h1>
+                <h2 class="rate-text"><span id="heartRateValue">--</span> bpm</h2>
+                <button class="database-btn">Database</button>
+            </div>
+
+            <div class="heart-rate-graph">
+                <canvas id="heartRateChart"></canvas>
+            </div>
+        </div>
+
+        <div class="heart-rate-footer">
+            <p>Time Stamp: <span id="timestamp">-----</span></p>
+            <p>Heart Rate: <span id="heartRateValue">-------</span> bpm</p>
+        </div>
+    </main>
+
+    <script src="js/heart_rate.js"></script> <!-- Load JavaScript file -->
+</body>
+</html>

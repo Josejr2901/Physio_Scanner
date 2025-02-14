@@ -1,0 +1,51 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>PPG Monitoring</title>
+     <link rel="stylesheet" href="css/ppg.css">
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for Graphs -->
+ </head>
+ <body>
+ 
+     <header>
+         <div class="logo">
+             <a href="dashboard.html">
+                 <img src="images/logo.png" alt="Logo">
+             </a>
+             <span>Cardiovascular Biometric Tracker</span>
+         </div>
+         <button class="sign-in">Username</button>
+     </header>
+ 
+     <main class="ppg-container">
+         <div class="sensor-values">
+             <button class="sensor-btn">Heart Rate <span id="heartRate">--</span> bpm</button>
+             <button class="sensor-btn">Temperature <span id="temperature">--</span>°C</button>
+             <button class="sensor-btn">ECG <span id="ecg">--</span> bpm</button>
+         </div>
+ 
+         <div class="ppg-content">
+             <div class="ppg-info">
+                 <h1>Sensor PPG</h1>
+                 <h2 class="rate-text"><span id="ppgRate">--</span> bpm</h2>
+                 <button class="database-btn">Database</button>
+             </div>
+ 
+             <div class="ppg-graph">
+                 <canvas id="ppgChart"></canvas>
+             </div>
+         </div>
+ 
+         <div class="ppg-footer">
+             <p>Time Stamp: <span id="timestamp">-----</span></p>
+             <p>Voltage: <span id="voltage">-------</span></p>
+         </div>
+     </main>
+ 
+     <script src="js/ppg.js"></script> <!-- Load JavaScript file -->
+ </body>
+ </html>
+ 

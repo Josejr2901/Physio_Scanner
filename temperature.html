@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Monitoring</title>
+    <link rel="stylesheet" href="css/temperature.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for Graphs -->
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="dashboard.html">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+            <span>Cardiovascular Biometric Tracker</span>
+        </div>
+        <button class="sign-in">Username</button>
+    </header>
+
+    <main class="temperature-container">
+        <div class="sensor-values">
+            <button class="sensor-btn">Heart Rate <span id="heartRate">--</span> bpm</button>
+            <button class="sensor-btn">ECG <span id="ecg">--</span> bpm</button>
+            <button class="sensor-btn">PPG <span id="ppg">--</span> bpm</button>
+        </div>
+
+        <div class="temperature-content">
+            <div class="temperature-info">
+                <h1>Sensor Temperature</h1>
+                <h2 class="rate-text"><span id="temperatureValue">--</span>°C</h2>
+                <button class="database-btn">Database</button>
+            </div>
+
+            <div class="temperature-graph">
+                <canvas id="temperatureChart"></canvas>
+            </div>
+        </div>
+
+        <div class="temperature-footer">
+            <p>Time Stamp: <span id="timestamp">-----</span></p>
+            <p>Temperature: <span id="tempValue">-------</span>°C</p>
+        </div>
+    </main>
+
+    <script src="js/temperature.js"></script> <!-- Load JavaScript file -->
+</body>
+</html>

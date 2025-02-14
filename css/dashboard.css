@@ -1,0 +1,101 @@
+/* dashboard.css - Styles for the Dashboard Page */
+
+/* General Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Header */
+header {
+    background-color: #a7bdc3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 16px;
+}
+
+/* Username Button */
+.sign-in {
+    background-color: #915656;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sign-in:hover {
+    background-color: #7a4747;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Graphs Section */
+.graphs {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Each Graph Box */
+.graph-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px;
+    width: 95%; 
+    border-radius: 8px;
+    height: 150px; /* Reduce height to fit more graphs */
+}
+
+canvas {
+    height: 150px !important; /* Adjust graph height */
+    flex-grow: 1; /* Makes the graph expand */
+    width: 85% !important; /* Adjust to push numbers further right */
+}
+
+/* Value Box */
+.value-box {
+    width: 100px;
+    text-align: right;
+    color: white;
+    font-size: 22px;
+    margin-left: 10px; /* Pushes it away from the graph */
+}
+
+.value-box h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.value-box span {
+    font-weight: bold;
+    font-size: 30px;
+}

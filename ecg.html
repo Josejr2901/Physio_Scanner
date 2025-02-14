@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG Monitoring</title>
+    <link rel="stylesheet" href="css/ecg.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="dashboard.html">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+            <span>Cardiovascular Biometric Tracker</span>
+        </div>
+        <button class="sign-in">Username</button>
+    </header>
+
+    <main class="ecg-container">
+        <div class="sensor-values">
+            <button class="sensor-btn">Heart Rate <span id="heartRate">--</span> bpm</button>
+            <button class="sensor-btn">Temperature <span id="temperature">--</span>°C</button>
+            <button class="sensor-btn">PPG <span id="ppg">--</span> bpm</button>
+        </div>
+
+        <div class="ecg-content">
+            <div class="ecg-info">
+                <h1>Sensor ECG</h1>
+                <h2 class="rate-text"><span id="ecgRate">--</span> bpm</h2>
+                <button class="database-btn">Database</button>
+            </div>
+
+            <div class="ecg-graph">
+                <canvas id="ecgChart"></canvas>
+            </div>
+        </div>
+
+        <div class="ecg-footer">
+            <p>Time Stamp: <span id="timestamp">-----</span></p>
+            <p>Voltage: <span id="voltage">-------</span></p>
+        </div>
+    </main>
+
+    <script src="js/ecg.js"></script> <!-- Load JavaScript file -->
+</body>
+</html>
